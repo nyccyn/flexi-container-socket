@@ -1,0 +1,31 @@
+{
+  "name": "flexi-container-socket",
+  "version": "0.0.5",
+  "description": "Socket.io plugin for flexi-container",
+  "main": "./lib/socket-container.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyccyn/flexi-container-socket.git"
+  },
+  "author": "Nadav Cohen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nyccyn/flexi-container-socket/issues"
+  },
+  "homepage": "https://github.com/nyccyn/flexi-container-socket#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.1.8"
+  },
+  "dependencies": {
+    "flexi-container": "^0.0.5",
+    "socket.io": "^1.7.2",
+    "socket.io-client": "^1.7.2"
+  }
+}

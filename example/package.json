@@ -1,0 +1,14 @@
+{
+  "name": "flexi-container-socket-example",
+  "version": "0.0.1",
+  "description": "Simple example for flexi-container-socket plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nadav Cohen <nyccyn@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "flexi-container-socket": "^0.0.5"
+  }
+}

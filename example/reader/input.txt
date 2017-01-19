@@ -1,0 +1,3 @@
+Hello,
+this is flexi-contianer example
+this example using socket.io plugin
