@@ -43,14 +43,15 @@ export default class SocketContainer {
     }
     getService(contract) {
         const consumer = new Consumer(Client(this.props.remoteUrl, this.props.clientOpts));
+        consumer._callback = {};
 
         for (let f in contract){
             switch (contract[f]){
                 case Contract.Event:
-                    consumer[f] = callback => consumer[f+'Callback'] = callback;
+                    consumer[f] = callback => consumer._callback[f] = callback;
                     consumer.io.on(f, (...args) => {
-                        if (consumer[f+'Callback'] && typeof consumer[f+'Callback'] === 'function'){
-                            consumer[f+'Callback'](...args)
+                        if (consumer._callback[f] && typeof consumer._callback[f] === 'function'){
+                            consumer._callback[f](...args)
                         }
                     });
                     break;
